@@ -15,4 +15,4 @@ require "s3_relay/model"
 require "s3_relay/private_url"
 require "s3_relay/upload_presigner"
 
-ActiveRecord::Base.extend S3Relay::Model
+ActiveSupport.on_load(:active_record) { extend S3Relay::Model }

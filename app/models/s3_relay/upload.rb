@@ -29,7 +29,7 @@ module S3Relay
     end
 
     def mark_imported!
-      update_attributes(state: "imported", imported_at: Time.now)
+      update(state: "imported", imported_at: Time.now)
     end
 
     def notify_parent
