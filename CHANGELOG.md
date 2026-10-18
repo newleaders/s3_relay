@@ -1,3 +1,9 @@
+## 0.7.1 (unreleased)
+
+* Replace `update_attributes` (removed in Rails 6.1) with `update` in `Upload#mark_imported!`
+* Extend `ActiveRecord::Base` via `ActiveSupport.on_load(:active_record)` so the engine no longer loads it during initialization (Rails 7+ autoloading)
+* Require `addressable/uri` in `PrivateUrl`
+
 ## 0.7.0 (November 29, 2020)
 
 * Updates to align with Rails 5.2 and latest gem dependency versions
