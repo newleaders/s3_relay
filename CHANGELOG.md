@@ -1,3 +1,7 @@
+## 0.7.3 (unreleased)
+
+* Add `S3Relay::UploadsHelper` to `ActionController::Base` from `to_prepare` instead of an `on_load(:action_controller)` hook, which autoloaded the helper during initialization and raised `NameError` on Rails 7.0
+
 ## 0.7.2 (unreleased)
 
 * Ship `s3_relay.js` (plain JavaScript) in place of `s3_relay.coffee` and drop the `coffee-rails` runtime dependency
