@@ -2,10 +2,10 @@ module S3Relay
   class Engine < ::Rails::Engine
     isolate_namespace S3Relay
 
-    initializer "s3_relay.action_controller" do |app|
-      ActiveSupport.on_load :action_controller do
-        helper S3Relay::UploadsHelper if respond_to?(:helper)
-      end
+    # Rails 7 forbids autoloading while initializers run, so add the helper in
+    # to_prepare rather than from an on_load hook that fires during boot.
+    config.to_prepare do
+      ActionController::Base.helper S3Relay::UploadsHelper
     end
   end
 end
