@@ -1,3 +1,7 @@
+## 0.7.2 (unreleased)
+
+* Ship `s3_relay.js` (plain JavaScript) in place of `s3_relay.coffee` and drop the `coffee-rails` runtime dependency
+
 ## 0.7.1 (unreleased)
 
 * Replace `update_attributes` (removed in Rails 6.1) with `update` in `Upload#mark_imported!`
